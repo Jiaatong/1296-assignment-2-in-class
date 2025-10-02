@@ -17,7 +17,7 @@ players = [("Sally", 95), ("Toby", 90), ("Sandeep", 10), ("Zainab", 5)]
 
 # setup variables to store summary values
 num_players = len(players)
-highest_score_player = (None, 0)
+highest_score_player = (None, 0) # get_highest_score_player()
 lowest_score_player = (None, 0)
 average_score = calculate_avg_score(players)
 
