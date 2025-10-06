@@ -12,6 +12,13 @@ Enter player name (or "done"): Cara
 Enter score for Cara: 88
 Enter player name (or "done"): done
 """
+player_name = input("Enter player name (or \"done\"):")
+print(f"Enter player name (or \"done\"): {player_name}")
+scores = int(input("Enter score for player: "))
+if scores >= 0:
+    print(f"Enter score for {player_name}: {scores}")
+else:
+    print("Invalid score. Skipping this entry.")
 # store players as a list of tuples
 players = [("Sally", 95), ("Toby", 90), ("Sandeep", 10), ("Zainab", 5)]
 
