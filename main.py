@@ -12,16 +12,21 @@ Enter player name (or "done"): Cara
 Enter score for Cara: 88
 Enter player name (or "done"): done
 """
-player_name = input("Enter player name (or \"done\"):")
-print(f"Enter player name (or \"done\"): {player_name}")
-scores = int(input("Enter score for player: "))
-if scores >= 0:
-    print(f"Enter score for {player_name}: {scores}")
-else:
-    print("Invalid score. Skipping this entry.")
 # store players as a list of tuples
-players = [("Sally", 95), ("Toby", 90), ("Sandeep", 10), ("Zainab", 5)]
-
+players = []
+while True:
+    player_name = input("Enter player name (or \"done\")")
+    if player_name.lower() == "done":
+        break
+    score = int(input(f"Enter score for {player_name}: "))
+    try: 
+        if score >= 0:
+            players.append((player_name, score))
+        else:
+            print("Invalid score. Skipping this entry.")
+    except ValueError:
+        print("Invalid score. Skipping this entry.")
+print(players)
 # setup variables to store summary values
 num_players = len(players)
 highest_score_player = (None, 0) # get_highest_score_player()
