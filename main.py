@@ -29,9 +29,10 @@ while True:
 print(players)
 # setup variables to store summary values
 num_players = len(players)
-highest_score_player = (None, 0) # get_highest_score_player()
-lowest_score_player = (None, 0)
+highest_score_player = max(players, key=lambda x: x[1]) # get_highest_score_player()
+lowest_score_player = min(players, key=lambda x: x[1])
 average_score = calculate_avg_score(players)
 
 # Output player summary
 output_player_summary(num_players, highest_score_player[1], lowest_score_player[1], average_score)
+
