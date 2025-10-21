@@ -17,3 +17,5 @@ def calculate_avg_score(players):
     # divide by the number of scores
     # set the value of average_score
     return score_total / len(player_scores)
+
+    # 2025 10 20
